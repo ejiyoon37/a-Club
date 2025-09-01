@@ -1,0 +1,40 @@
+@import url('https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans text-gray-900 bg-white;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* 필요시 폰트 임포트 */
+@font-face {
+  font-family: 'Wanted Sans';
+  font-weight: 400;
+  src: url('/fonts/WantedSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Wanted Sans';
+  font-weight: 700;
+  src: url('/fonts/WantedSans-Bold.woff2') format('woff2');
+}
+
+
+.head01_b {
+  @apply text-[28px] font-bold leading-[34px] tracking-tight;
+}
+
+.title01_b {
+  @apply text-[20px] font-bold leading-[26px] tracking-tight;
+}
+
+.body01_m {
+  @apply text-[16px] font-medium leading-[24px];
+}
+
+.caption01_r {
+  @apply text-[12px] font-normal leading-[18px];
+}
