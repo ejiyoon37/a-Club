@@ -1,28 +1,17 @@
 @import url('https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* 전역 스타일 설정 */
 body {
   @apply font-sans text-gray-900 bg-white;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
 }
 
-/* 필요시 폰트 임포트 */
-@font-face {
-  font-family: 'Wanted Sans';
-  font-weight: 400;
-  src: url('/fonts/WantedSans-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Wanted Sans';
-  font-weight: 700;
-  src: url('/fonts/WantedSans-Bold.woff2') format('woff2');
-}
-
-
+/* 폰트 및 디자인 시스템을 위한 커스텀 클래스 정의 */
 .head01_b {
   @apply text-[28px] font-bold leading-[34px] tracking-tight;
 }
@@ -37,4 +26,8 @@ body {
 
 .caption01_r {
   @apply text-[12px] font-normal leading-[18px];
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition-colors duration-200;
 }

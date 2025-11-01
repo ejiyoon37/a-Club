@@ -175,16 +175,25 @@ function RecruitingSection() {
     const loadData = async () => {
       try {
         const data = await fetchHomeRecruitments();
-        console.log("✅ 모집공고 응답 데이터:", data); // 👈 콘솔 찍기
-        setRecruitList(data);
+        console.log("✅ 모집공고 응답 데이터:", data);
+  
+        // ✅ recruitment_id 중복 제거
+        const unique = data.filter(
+          (item, index, self) =>
+            index === self.findIndex((r) => r.recruitment_id === item.recruitment_id)
+        );
+  
+        console.log("🧹 중복 제거 후:", unique);
+  
+        setRecruitList(unique);
       } catch (err) {
         console.error("❌ API 호출 실패:", err);
       }
     };
-
+  
     loadData();
   }, []);
-
+  
   return (
     <section className="w-[343px] space-y-3">
       {/* 상단 제목 + 전체보기 버튼 */}

@@ -29,10 +29,10 @@ function HomePage() {
             <Banner />
           </section>
 
-          {/* 지금 모집 중인 공고
+          {/* 지금 모집 중인 공고 */}
           <section className="w-[343px]">
             <RecruitingSection />
-          </section> */}
+          </section>
 
           {/* 동아리 둘러보기 */}
           <section className="w-[343px]">
